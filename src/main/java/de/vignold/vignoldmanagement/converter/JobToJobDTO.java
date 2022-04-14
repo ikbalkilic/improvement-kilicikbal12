@@ -1,11 +1,9 @@
 package de.vignold.vignoldmanagement.converter;
 
 import de.vignold.vignoldmanagement.dto.JobDTO;
-import de.vignold.vignoldmanagement.dto.ProductDTO;
 import de.vignold.vignoldmanagement.entity.Job;
-import de.vignold.vignoldmanagement.entity.Product;
 import de.vignold.vignoldmanagement.entity.state.State;
-import org.springframework.beans.BeanUtils;
+
 
 import java.util.ArrayList;
 import java.util.List;

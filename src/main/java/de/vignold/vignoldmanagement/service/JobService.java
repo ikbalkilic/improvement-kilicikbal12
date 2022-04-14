@@ -1,13 +1,29 @@
 package de.vignold.vignoldmanagement.service;
 
+import de.vignold.vignoldmanagement.converter.JobToJobDTO;
+import de.vignold.vignoldmanagement.dao.JobRepository;
 import de.vignold.vignoldmanagement.dto.JobDTO;
 import de.vignold.vignoldmanagement.entity.Job;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface JobService {
+@Service
+public class JobService {
+    @Autowired
+    JobRepository jobRepository;
 
-    void jobSave(Job job);
-    void jobSaveDTO(JobDTO jobDTO);
 
-    public Job findJobById(Long id);
-    public JobDTO findJobDTOById(Long id);
+    public void jobSave(Job job){
+        jobRepository.save(job);
+    }
+    public void jobSaveDTO(JobDTO jobDTO){
+        jobSave(JobToJobDTO.convertToJob(jobDTO));
+    }
+
+    public Job findJobById(Long id){
+        return jobRepository.findAllById(id);
+    }
+    public JobDTO findJobDTOById(Long id){
+        return JobToJobDTO.convertToJobDto(findJobById(id));
+    }
 }

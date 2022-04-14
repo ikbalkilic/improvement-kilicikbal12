@@ -1,6 +1,5 @@
 package de.vignold.vignoldmanagement.controller;
 
-import de.vignold.vignoldmanagement.dto.JobDTO;
 import de.vignold.vignoldmanagement.dto.ProductDTO;
 import de.vignold.vignoldmanagement.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +27,5 @@ public class ProductController {
         productService.saveProductDTO(productDTO);
         return new ResponseEntity<>(null,null, HttpStatus.OK);
     }
-    /*@ApiOperation(value = "Save a new prod oper output / Yeni Prod Oper Output kaydı yapar.")
-    @PostMapping("/save-prod-oper-output")
-    public ResponseEntity<?> saveProdOperOutput(@RequestBody ProdOperOutputDto prodOperOutputDto) {
-        prodOperService.save(prodOperOutputDto);
-        return new ResponseEntity<>(new ApiSuccess("Ürün Operasyon Output Başarıyla Kaydedildi", null), HttpStatus.OK);
-    }*/
+
 }

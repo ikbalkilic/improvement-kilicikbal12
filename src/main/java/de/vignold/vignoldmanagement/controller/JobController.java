@@ -1,7 +1,6 @@
 package de.vignold.vignoldmanagement.controller;
 
 import de.vignold.vignoldmanagement.dto.JobDTO;
-import de.vignold.vignoldmanagement.dto.ProductDTO;
 import de.vignold.vignoldmanagement.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
