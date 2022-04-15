@@ -47,7 +47,7 @@ public class Product {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private ZonedDateTime updatedDate = ZonedDateTime.now();
 
-    @Column
+  /*  @Column
     @NotEmpty(message = "State can not be null or empty!")
-    private int operatorId;
+    private int operatorId;*/
 }

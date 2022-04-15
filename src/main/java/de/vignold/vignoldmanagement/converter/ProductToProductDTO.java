@@ -23,10 +23,10 @@ public class ProductToProductDTO {
         }
         product.setDescription(productDTO.getDescription());
         product.setDeleted(productDTO.getDeleted());
-        //product.setState(State.RUNNING);
+        product.setState(State.RUNNING);
         product.setCreatedDate(productDTO.getCreatedDate());
         product.setUpdatedDate(productDTO.getUpdatedDate());
-        product.setOperatorId(productDTO.getOperatorId());
+       // product.setOperatorId(productDTO.getOperatorId());
 
 
 
@@ -48,7 +48,7 @@ public class ProductToProductDTO {
             productDTO.setState(State.RUNNING);
             productDTO.setCreatedDate(product.getCreatedDate());
             productDTO.setUpdatedDate(product.getUpdatedDate());
-            productDTO.setOperatorId(product.getOperatorId());
+            //productDTO.setOperatorId(product.getOperatorId());
 
 
 

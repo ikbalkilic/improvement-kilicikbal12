@@ -34,6 +34,6 @@ public class ProductDTO {
     @JsonProperty("updatedDate")
     private ZonedDateTime updatedDate;
 
-    @JsonProperty("operatorId")
-    private int operatorId;
+   /* @JsonProperty("operatorId")
+    private int operatorId;*/
 }

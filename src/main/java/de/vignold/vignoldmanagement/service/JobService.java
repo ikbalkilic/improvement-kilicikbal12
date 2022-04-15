@@ -7,6 +7,8 @@ import de.vignold.vignoldmanagement.entity.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class JobService {
     @Autowired
@@ -26,4 +28,25 @@ public class JobService {
     public JobDTO findJobDTOById(Long id){
         return JobToJobDTO.convertToJobDto(findJobById(id));
     }
+
+    public void deleteJobById(Long id){
+        jobRepository.deleteById(id);
+    }
+
+    public List<Job> getAllJob(){
+        return jobRepository.findAll();
+    }
+    public List<JobDTO> getAllJobDTO(){
+        return JobToJobDTO.convertToJobDTOList(getAllJob());
+    }
+
+    public Job updateJob(Long id){
+        Job updateJob=jobRepository.findAllById(id);
+        if (updateJob!=null){
+            updateJob.setDeleted(Boolean.TRUE);
+        }
+        return jobRepository.save(updateJob);
+    }
+
+
 }
