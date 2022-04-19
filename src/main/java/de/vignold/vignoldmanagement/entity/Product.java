@@ -39,13 +39,13 @@ public class Product {
     @NotNull(message = "State can not be null!")
     private State state;
 
-    @Column
+   /* @Column
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private ZonedDateTime createdDate = ZonedDateTime.now();
 
     @Column
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private ZonedDateTime updatedDate = ZonedDateTime.now();
+    private ZonedDateTime updatedDate = ZonedDateTime.now();*/
 
   /*  @Column
     @NotEmpty(message = "State can not be null or empty!")

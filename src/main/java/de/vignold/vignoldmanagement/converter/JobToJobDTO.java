@@ -19,8 +19,8 @@ public class JobToJobDTO {
         job.setDescription(jobDTO.getDescription());
         job.setDeleted(jobDTO.getDeleted());
         job.setState(State.RUNNING);
-        job.setCreatedDate(jobDTO.getCreatedDate());
-        job.setUpdatedDate(jobDTO.getUpdatedDate());
+        /*job.setCreatedDate(jobDTO.getCreatedDate());
+        job.setUpdatedDate(jobDTO.getUpdatedDate());*/
        // job.setOperatorId(1);
 
 
@@ -39,8 +39,8 @@ public class JobToJobDTO {
         jobDTO.setDescription(job.getDescription());
         jobDTO.setDeleted(job.getDeleted());
         jobDTO.setState(State.RUNNING);
-        jobDTO.setCreatedDate(job.getCreatedDate());
-        jobDTO.setUpdatedDate(job.getUpdatedDate());
+       /* jobDTO.setCreatedDate(job.getCreatedDate());
+        jobDTO.setUpdatedDate(job.getUpdatedDate());*/
         //jobDTO.setOperatorId(1);
 
 

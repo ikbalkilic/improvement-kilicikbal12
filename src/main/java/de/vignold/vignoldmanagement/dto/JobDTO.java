@@ -23,11 +23,11 @@ public class JobDTO {
     @JsonProperty("state")
     private State state;
 
-    @JsonProperty("createdDate")
+   /* @JsonProperty("createdDate")
     private ZonedDateTime createdDate;
 
     @JsonProperty("updatedDate")
-    private ZonedDateTime updatedDate;
+    private ZonedDateTime updatedDate;*/
 
    /* @JsonProperty("operatorId")
     private Integer operatorId;*/
